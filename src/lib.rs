@@ -626,7 +626,7 @@ impl Drop for Device {
 }
 
 fn ffs<T: num::FromPrimitive, U: num::ToPrimitive>(x: U) -> T {
-    T::from_u32(31 - U::to_u64(&x).unwrap().leading_zeros()).unwrap()
+    T::from_u32(63 - U::to_u64(&x).unwrap().leading_zeros()).unwrap()
 }
 
 impl Device {
